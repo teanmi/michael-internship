@@ -29,6 +29,10 @@ const ExpiryDate = ({ item }) => {
     }
 
     let _ = setInterval(displayTimer, 1000);
+
+    return () => {
+      setDateFormat("")
+    }
   }, []);
 
   return <div className="de_countdown">{dateFormat}</div>;
