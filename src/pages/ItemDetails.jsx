@@ -16,7 +16,6 @@ const ItemDetails = () => {
     );
     setItemData(data);
     setLoading(false);
-    console.log(data);
   }
 
   useEffect(() => {
@@ -33,7 +32,7 @@ const ItemDetails = () => {
   return (
     <div id="wrapper">
       <div className="no-bottom no-top" id="content">
-        {loading && (
+        {!loading && (
           <>
             <div id="top"></div>
             <section aria-label="section" className="mt90 sm-mt-0">
@@ -122,7 +121,7 @@ const ItemDetails = () => {
           </>
         )}
 
-        {!loading && (
+        {loading && (
           <>
             <div id="top"></div>
             <section aria-label="section" className="mt90 sm-mt-0">
