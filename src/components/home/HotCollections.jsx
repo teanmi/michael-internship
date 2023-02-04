@@ -5,6 +5,7 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import "./HotCollections.css";
+import "aos/dist/aos.css";
 
 const HotCollections = () => {
   const [hotCollectionsData, setHotCollectionsData] = useState([]);
@@ -29,13 +30,17 @@ const HotCollections = () => {
         <div className="row">
           <div className="col-lg-12">
             <div className="text-center">
-              <h2>Hot Collections</h2>
+              <h2 data-aos="fade" data-aos-druation="800">
+                Hot Collections
+              </h2>
               <div className="small-border bg-color-2"></div>
             </div>
           </div>
 
           {!loading && (
             <OwlCarousel
+              data-aos="fade"
+              data-aos-druation="800"
               className="owl-theme"
               loop
               nav
