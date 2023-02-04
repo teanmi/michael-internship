@@ -5,8 +5,15 @@ import Author from "./pages/Author";
 import ItemDetails from "./pages/ItemDetails";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
+import AOS from "aos";
 
 function App() {
+  AOS.init({
+    duration: 1200,
+    once: true,
+    offset: 0,
+  })
+
   return (
     <Router>
       <Nav />

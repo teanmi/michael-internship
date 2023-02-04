@@ -6,6 +6,7 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import Skeleton from "../UI/Skeleton";
+import "aos/dist/aos.css";
 
 const NewItems = () => {
   const [newItemsData, setNewItemsData] = useState([]);
@@ -30,12 +31,16 @@ const NewItems = () => {
         <div className="row">
           <div className="col-lg-12">
             <div className="text-center">
-              <h2>New Items</h2>
+              <h2 data-aos="fade" data-aos-druation="800">
+                New Items
+              </h2>
               <div className="small-border bg-color-2"></div>
             </div>
           </div>
           {!loading && (
             <OwlCarousel
+              data-aos="fade"
+              data-aos-druation="800"
               className="owl-theme"
               loop
               nav
